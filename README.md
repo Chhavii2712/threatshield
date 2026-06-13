@@ -4,7 +4,6 @@
 ### Autonomous AI-Powered Cyber Threat Response Framework
 
 ![ThreatShield Banner](public/icons.svg)
-
 [![GitHub](https://img.shields.io/badge/GitHub-ThreatShield-black?style=for-the-badge&logo=github)](https://github.com/Chhavii2712/threatshield)
 [![Built With React](https://img.shields.io/badge/Built%20With-React-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
 
@@ -195,9 +194,12 @@ Screenshots:
 
 <img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/0308ebdc-efb6-4ed1-ab56-dae9c307a130" />
 
+
 <img width="1915" height="906" alt="image" src="https://github.com/user-attachments/assets/8ac07bda-49e2-4def-9c94-d08eb78a90df" />
 
+
 <img width="1917" height="900" alt="image" src="https://github.com/user-attachments/assets/c1651388-18f4-41eb-9458-c2b19b35a24b" />
+
 
 <img width="1912" height="892" alt="image" src="https://github.com/user-attachments/assets/a30311ef-6c68-460f-97c8-93bdcf817954" />
 
