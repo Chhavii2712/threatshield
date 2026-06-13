@@ -1,0 +1,95 @@
+/* ─── StatsBar ─── */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-xl);
+  animation: slideInUp 0.5s ease;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+  transition: width var(--transition-base);
+}
+
+.stat-card:hover::before {
+  width: 4px;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Color accents */
+.stat--primary::before { background: var(--accent-primary); }
+.stat--critical::before { background: var(--accent-critical); }
+.stat--high::before { background: var(--accent-high); }
+.stat--medium::before { background: var(--accent-medium); }
+.stat--low::before { background: var(--accent-low); }
+.stat--auto::before { background: var(--accent-secondary); }
+
+.stat--critical:hover { box-shadow: var(--shadow-glow-critical); }
+.stat--high:hover { box-shadow: var(--shadow-glow-high); }
+.stat--medium:hover { box-shadow: var(--shadow-glow-medium); }
+.stat--low:hover { box-shadow: var(--shadow-glow-low); }
+.stat--primary:hover { box-shadow: var(--shadow-glow-primary); }
+.stat--auto:hover { box-shadow: 0 0 20px rgba(0, 212, 255, 0.15); }
+
+.stat-card__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.stat-card__data {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.stat-card__count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  animation: countUp 0.3s ease;
+}
+
+.stat-card__label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1200px) {
+  .stats-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--space-sm) var(--space-md);
+  }
+}

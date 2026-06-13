@@ -1,0 +1,66 @@
+/* ─── GeoMap ─── */
+.geo-map {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  height: 100%;
+}
+
+.geo-map__header {
+  margin-bottom: var(--space-md);
+}
+
+.geo-map__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.geo-map__content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  padding: var(--space-xs);
+}
+
+.world-svg {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+}
+
+.map-node__pulse {
+  transform-origin: center;
+  animation: ripple 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+.map-node__dot {
+  filter: drop-shadow(0 0 4px var(--accent-critical));
+}
+
+.geo-map__footer {
+  margin-top: var(--space-sm);
+}
+
+.geo-map__top-countries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.geo-badge {
+  font-size: 0.75rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--text-secondary);
+}

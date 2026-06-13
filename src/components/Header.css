@@ -1,0 +1,199 @@
+/* ─── Header ─── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-md) var(--space-xl);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideDown 0.4s ease;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.header__shield-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--accent-primary);
+  filter: drop-shadow(0 0 8px var(--accent-primary-glow));
+}
+
+.header__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.header__subtitle {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+/* ─── Live Status ─── */
+.header__status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-left: auto;
+}
+
+.header__live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transition: background var(--transition-base);
+}
+
+.header__live-dot--active {
+  background: var(--accent-success);
+  box-shadow: 0 0 8px rgba(0, 230, 118, 0.5);
+  animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
+.header__live-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+}
+
+.header__divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border-default);
+  margin: 0 var(--space-xs);
+}
+
+.header__event-count {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* ─── Clock ─── */
+.header__time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header__clock {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+.header__date {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+/* ─── Controls ─── */
+.header__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.header__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.header__btn:hover {
+  background: var(--bg-glass-hover);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.header__btn--pause {
+  color: var(--accent-medium);
+  border-color: rgba(255, 209, 102, 0.2);
+}
+
+.header__btn--play {
+  color: var(--accent-success);
+  border-color: rgba(0, 230, 118, 0.2);
+}
+
+.header__btn--danger:hover {
+  color: var(--accent-danger);
+  border-color: rgba(255, 45, 85, 0.3);
+  background: rgba(255, 45, 85, 0.08);
+}
+
+.header__speed-group {
+  display: flex;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.header__speed-btn {
+  padding: 6px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.header__speed-btn + .header__speed-btn {
+  border-left: 1px solid var(--border-subtle);
+}
+
+.header__speed-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-glass-hover);
+}
+
+.header__speed-btn--active {
+  background: var(--accent-primary);
+  color: #fff;
+  box-shadow: 0 0 10px var(--accent-primary-glow);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .header {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+  }
+  .header__status {
+    margin-left: 0;
+  }
+}

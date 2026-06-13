@@ -1,0 +1,132 @@
+/* ─── WebhookPanel ─── */
+.webhook-panel {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  height: 100%;
+}
+
+.webhook-panel__header {
+  margin-bottom: var(--space-md);
+}
+
+.webhook-panel__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.webhook-panel__subtitle {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.webhook-panel__config {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.config-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.config-input {
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.config-input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-glow-primary);
+}
+
+.webhook-panel__logs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex: 1;
+  min-height: 0;
+}
+
+.logs-title {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.logs-list {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid var(--border-subtle);
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.logs-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.log-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  padding: 4px var(--space-xs);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.log-row:last-child {
+  border-bottom: none;
+}
+
+.log-row__time {
+  color: var(--text-muted);
+}
+
+.log-row__action {
+  color: var(--accent-secondary);
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.log-row__status {
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+
+.status-delivered {
+  color: var(--accent-success);
+}
+
+.status-failed {
+  color: var(--accent-danger);
+}
+
+.status-sending {
+  color: var(--accent-medium);
+  animation: pulseGlow 1.5s infinite;
+}

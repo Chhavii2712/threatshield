@@ -1,0 +1,133 @@
+/* ─── SeverityChart ─── */
+.severity-chart {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  height: 100%;
+}
+
+.severity-chart__header {
+  margin-bottom: var(--space-md);
+}
+
+.severity-chart__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.severity-chart__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex: 1;
+}
+
+.severity-chart__visualization {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.donut {
+  transform: rotate(-90deg); /* align top start */
+}
+
+.donut-segment {
+  transition: stroke-dashoffset 0.5s ease, stroke-dasharray 0.5s ease;
+  stroke-linecap: round;
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.donut-center__count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.donut-center__label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.severity-chart__legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  flex: 1;
+  min-width: 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  font-size: 0.8rem;
+}
+
+.legend-item__label-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.legend-item__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.legend-item__label {
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.legend-item__stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.legend-item__count {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.legend-item__percentage {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  width: 32px;
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .severity-chart__content {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+}

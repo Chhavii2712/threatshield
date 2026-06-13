@@ -1,0 +1,68 @@
+/* ─── ThreatTypeChart ─── */
+.threat-type-chart {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  height: 100%;
+}
+
+.threat-type-chart__header {
+  margin-bottom: var(--space-md);
+}
+
+.threat-type-chart__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.threat-type-chart__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: 0.8rem;
+}
+
+.bar-row__label {
+  width: 110px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+}
+
+.bar-row__track {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-row__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 4px;
+  transition: width 0.4s cubic-bezier(0.1, 0.8, 0.3, 1);
+  box-shadow: 0 0 6px var(--accent-primary-glow);
+}
+
+.bar-row__val {
+  width: 28px;
+  text-align: right;
+  color: var(--text-primary);
+  font-weight: 600;
+  flex-shrink: 0;
+}

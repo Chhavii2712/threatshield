@@ -1,0 +1,312 @@
+/* ─── ThreatDetail ─── */
+.threat-detail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 700px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+.threat-detail-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 400px;
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.threat-detail-empty__icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  color: var(--text-muted);
+}
+
+.threat-detail-empty h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  color: var(--text-primary);
+}
+
+.threat-detail-empty p {
+  font-size: 0.85rem;
+  max-width: 320px;
+  line-height: 1.5;
+}
+
+.threat-detail__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.threat-detail__title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.threat-detail__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.threat-detail__close-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.threat-detail__close-btn:hover {
+  color: var(--text-primary);
+}
+
+.threat-detail__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* ─── Metrics Grid ─── */
+.threat-detail__grid-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.metric-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric-box__label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.metric-box__val {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* ─── Detail Sections ─── */
+.detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.detail-section__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.detail-section__card {
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.reasoning-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.mitre-mapping-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.mitre-label {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.mitre-val {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent-secondary);
+}
+
+.telemetry-card {
+  background: rgba(255, 255, 255, 0.01);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.telemetry-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.telemetry-row:last-child {
+  border-bottom: none;
+}
+
+.telemetry-label {
+  color: var(--text-muted);
+}
+
+.telemetry-val {
+  color: var(--text-secondary);
+  text-align: right;
+  word-break: break-all;
+}
+
+.escalation-text {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--accent-high);
+}
+
+.border-warning {
+  border-color: rgba(255, 140, 66, 0.2);
+}
+
+.bg-warning-subtle {
+  background: rgba(255, 140, 66, 0.04);
+}
+
+/* ─── Mitigation Control ─── */
+.action-control {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(108, 99, 255, 0.05);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  border-radius: var(--radius-sm);
+}
+
+.action-control__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.action-control__label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.action-control__val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.action-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: #fff;
+  text-align: center;
+}
+
+.action-btn--critical {
+  background: var(--accent-critical);
+  box-shadow: 0 4px 12px rgba(255, 45, 85, 0.3);
+}
+.action-btn--critical:hover:not(:disabled) {
+  background: #ff456e;
+  box-shadow: 0 4px 16px rgba(255, 45, 85, 0.5);
+}
+
+.action-btn--high {
+  background: var(--accent-high);
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
+}
+.action-btn--high:hover:not(:disabled) {
+  background: #ff9e60;
+  box-shadow: 0 4px 16px rgba(255, 140, 66, 0.5);
+}
+
+.action-btn--medium {
+  background: var(--accent-primary);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+}
+.action-btn--medium:hover:not(:disabled) {
+  background: #827aff;
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.5);
+}
+
+.action-btn--low {
+  background: var(--accent-low);
+  box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+  color: var(--bg-primary);
+}
+.action-btn--low:hover:not(:disabled) {
+  background: #6ae5dd;
+  box-shadow: 0 4px 16px rgba(78, 205, 196, 0.5);
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.action-success-msg {
+  text-align: center;
+  padding: 8px;
+  background: rgba(0, 230, 118, 0.1);
+  border: 1px solid rgba(0, 230, 118, 0.3);
+  color: var(--accent-success);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ─── Raw JSON ─── */
+.raw-json-container {
+  max-height: 200px;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+}
+
+.raw-json {
+  font-size: 0.75rem;
+  color: #a6b1c9;
+  tab-size: 2;
+}

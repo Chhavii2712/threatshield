@@ -1,0 +1,70 @@
+/* ─── AttackTriggerPanel ─── */
+.attack-trigger-panel {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  height: 100%;
+}
+
+.attack-trigger-panel__header {
+  margin-bottom: var(--space-md);
+}
+
+.attack-trigger-panel__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.attack-trigger-panel__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+.trigger-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--text-primary);
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.trigger-btn:hover {
+  background: rgba(108, 99, 255, 0.06);
+  border-color: rgba(108, 99, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.trigger-btn__icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.trigger-btn__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.trigger-btn__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.trigger-btn__desc {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
